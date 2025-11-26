@@ -1,0 +1,237 @@
+
+body {
+    background: linear-gradient(120deg, #00020a 55%, #0a0f29 100%);
+    min-height: 100vh;
+    color: #e0e6fb;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif !important;
+}
+div[data-testid="stAppViewContainer"], main { background: none !important; }
+div[data-testid="stHeader"] {
+    background: none;
+}
+.phshield-header {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 26px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.phshield-shieldrow {
+    display: flex;
+    align-items: center;
+}
+.phshield-shieldicon {
+    font-size: 48px;
+    margin-right: 13px;
+    filter: drop-shadow(0 0 14px #5be4ff80);
+    text-shadow: 0 0 8px #5be4ff80;
+}
+.phshield-title {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    background: linear-gradient(100deg,#b1e2ff 15%,#2bfff0 43%,#4489fa 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip:text;
+}
+.phshield-title-gradient {
+    background: linear-gradient(90deg,#8e6cff,#5be4ff 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip:text;
+}
+.phshield-subtitle {
+    color: #e0e7f870;
+    font-size: 19px;
+    max-width: 460px;
+    text-align: center;
+    margin: 8px 0 18px 0;
+    font-weight: 400;
+}
+.phshield-statsrow {
+    display: flex; 
+    justify-content: center;
+    gap: 38px;
+    margin: 13px 0 7px 0;
+}
+.phshield-stat {
+    font-size: 17px;
+    color: #b7caf4;
+    padding: 0 9px;
+    display:inline-block;
+}
+.phshield-stat-v {
+    color: #5be4ff;
+    font-weight: 800;
+    font-size: 21px;
+    margin-right: 2px;
+    margin-bottom: 1px;
+    letter-spacing: 0.01em;
+}
+.phshield-card {
+    background: rgba(255,255,255,0.04);
+    border-radius: 22px;
+    padding: 29px 28px 20px 28px;
+    margin-bottom: 23px;
+    border: 1.5px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 0 18px 0 #7b5bffd0, 0 0 0px 1.5px #5be4ff55;
+}
+.phshield-scanbox input, .phshield-scanbox textarea {
+    background: none !important;
+    border: 1.2px solid #6e54bb;
+    color: #fff !important;
+    box-shadow: 0 0 15px #5be4ff30;
+    border-radius: 12px;
+}
+button[data-testid="baseButton"] {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    border-radius: 12px !important;
+    background: linear-gradient(135deg,#d36bff,#7b5bff,#5be4ff);
+    padding: 8px 10px !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: 0 0 8px #7b5bff80, 0 0 0 2px #5be4ff30;
+    transition: background 0.18s;
+}
+.phshield-resultcard {
+    margin-top:6px;
+}
+.phshield-result-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 21px;
+    margin-bottom: 8px;
+}
+.phshield-result-heading {
+    font-weight: 600;
+    font-size: 24px;
+    color: #aaaaff;
+    letter-spacing:0.03em;
+}
+.phshield-badge {
+    display:inline-block;
+    font-weight: 500;
+    border-radius: 17px;
+    padding: 8px 23px 7px 23px;
+    font-size: 20px;
+    letter-spacing: 0.035em;
+    box-shadow: 0 0 22px 0 #5be4ff20;
+    background: #11123a88;
+    color: #fff;
+    margin-bottom:2px;
+    border: 1.3px solid #242bd8;
+}
+.badge-danger {
+    background:linear-gradient(100deg,#f5365c55,#b6002975);
+    color: #fff;
+    border: 1.7px solid #f5365c;
+    text-shadow: 0 0 8px  #f5365c95;
+    box-shadow: 0 0 24px 0 #f5365c60;
+}
+.badge-suspicious {
+    background:linear-gradient(100deg,#faad1425,#eb810055 95%);
+    color: #fff7de;
+    border: 1.7px solid #faad14;
+    text-shadow: 0 0 8px  #faad1480;
+    box-shadow: 0 0 15px 0 #faad1490;
+}
+.badge-lowrisk {
+    background:linear-gradient(90deg,#faad1488,#fca98211 90%);
+    color: #fcf4df;
+    border: 1.4px solid #faad14;
+}
+.badge-safe {
+    background:linear-gradient(100deg,#5be4ff,#22ff8e 80%);
+    color: #0a3055;
+    font-weight:700;
+    border: 1.4px solid #00ff99;
+    text-shadow: 0 0 6px #00ff9a70;
+    box-shadow: 0 0 14px 0 #5be4ff40;
+}
+.phshield-confidence {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+.phshield-confidence-val { margin-left: 7px; margin-right:3px;font-weight:700;font-size:23px;}
+.conf-dangerous { color: #f5365c; text-shadow: 0 0 7px #f5365cb0; }
+.conf-suspicious { color:#faad14; text-shadow: 0 0 7px #faad1460;}
+.conf-low_risk { color: #ffb84d; text-shadow: 0 0 7px #faad1450; }
+.conf-safe { color: #37e79b; text-shadow: 0 0 8px #37e79b70; }
+.phshield-explanation {
+    margin-top: 13px;
+    font-size: 16.4px;
+    color: #bacbf2;
+    min-height:42px;
+}
+.phshield-fsec { margin-top:18px; }
+.phshield-ftr-title {font-size:18.2px; font-weight:600;color:#87a7ff;}
+.phshield-ftrlist {
+    color:#e3e6ff;
+    margin:8px 0 8px 5px;
+    font-size:15.7px;
+}
+.phshield-ftrstats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top:10px;
+}
+.phshield-ftrstat {
+    background:#010f1d88;
+    border-radius:7px;
+    padding: 4px 13px;
+    margin-right: 6px;
+    font-size:15px;
+    border: 1.1px solid #2b2b55;
+    color:#89b3ff;
+}
+.phshield-tavis {
+    margin-top:20px;
+    padding:16px 23px 8px 23px !important;
+}
+.phshield-tavis-barwrap {
+    width:100%; background: #111a22aa; height:13px; border-radius:8px; margin:5px 0;
+    border: 1.3px solid #2b3c57;
+    overflow: hidden;
+}
+.phshield-tavis-bar {
+    height: 100%; height:13px;
+    border-radius:8px;
+    box-shadow:0 0 11px #fc405e66;
+}
+.phshield-tavis-label {
+    font-size:16.5px;
+    margin-top:2px;
+    font-weight:600;
+    color: #e0e0f7;
+    letter-spacing:0.01em;
+    text-align:center;
+}
+.phshield-footer {
+    margin-top: 72px;
+    text-align: center;
+    color: #6279ad;
+    font-size: 16.1px;
+    padding: 19px 0 6px 0;
+    width: 100%;
+}
+
+.analytics-header {
+    font-size: 29px !important;
+    font-weight: 700;
+    color: #6ecfff !important;
+    text-shadow: 0 0 8px #00d7ff99;
+    letter-spacing:0.04em;
+    margin-bottom:17px;
+}
+.analytics-wrapper {
+    width:68vw; max-width:688px;margin:37px auto 0 auto;
+}
