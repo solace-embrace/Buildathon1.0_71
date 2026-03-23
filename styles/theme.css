@@ -235,3 +235,46 @@ button[data-testid="baseButton"] {
 .analytics-wrapper {
     width:68vw; max-width:688px;margin:37px auto 0 auto;
 }
+
+/* ===================== AI EXPLANATION PREMIUM BLOCK ===================== */
+
+.phshield-ai-box {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 18px;
+    background: rgba(0, 255, 210, 0.06);
+    border: 1.8px solid rgba(0, 255, 210, 0.35);
+    box-shadow: 0 0 12px rgba(0,255,210,0.22);
+}
+
+.phshield-ai-title {
+    font-weight: 700;
+    font-size: 19px;
+    margin-bottom: 8px;
+    color: #00ffe4;
+    text-shadow: 0 0 8px #00ffe460;
+    letter-spacing: 0.02em;
+}
+
+.phshield-ai-text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #cfffff;
+    white-space: pre-line;
+}
+
+/* ==================== FIX STREAMLIT PRE/CODE OVERRIDE BUG ==================== */
+
+div.stMarkdown pre,
+div.stMarkdown code,
+pre, code {
+    background: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    color: inherit !important;
+    font-family: inherit !important;
+    box-shadow: none !important;
+    border: none !important;
+    white-space: normal !important;
+}
+

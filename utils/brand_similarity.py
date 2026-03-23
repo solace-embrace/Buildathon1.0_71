@@ -3,12 +3,13 @@ from difflib import SequenceMatcher
 # Popular brands commonly impersonated
 BRANDS = [
     "google", "paypal", "amazon", "facebook", "microsoft", 
-    "apple", "instagram", "whatsapp", "netflix", "linkedin"
+    "apple", "instagram", "whatsapp", "netflix", "linkedin",
+    "outlook", "office365", "gmail"
 ]
 
 def normalize(domain: str) -> str:
     """
-    Normalize domain by replacing look-alike characters used in phishing.
+    Normalize domain by replacing leetspeak and look-alike characters.
     Example: g00gle → google
     """
     replacements = {
@@ -16,6 +17,7 @@ def normalize(domain: str) -> str:
         "1": "l",
         "3": "e",
         "5": "s",
+        "7": "t",
         "@": "a",
         "-": ""
     }
@@ -27,10 +29,9 @@ def normalize(domain: str) -> str:
 
 def compute_brand_similarity(domain: str):
     """
-    Compute similarity between domain and known brands.
+    Compute similarity between normalized domain and known brands.
     Returns: (best_score, best_match_brand)
     """
-
     domain_norm = normalize(domain)
 
     best_score = 0
